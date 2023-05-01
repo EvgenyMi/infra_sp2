@@ -7,14 +7,14 @@ from dotenv import load_dotenv
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 load_dotenv()
+
 SECRET_KEY = os.getenv('SECRET_KEY', default='secret_key')
-# "p&l%385148kslhtyn^##a1)ilz@4zqj=rq&agdol^##zgl9(vs"
 
 if not SECRET_KEY:
     print('Ошибка, нет ключа SECRET_KEY в файле settings')
     sys.exit()
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
